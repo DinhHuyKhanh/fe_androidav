@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nsct"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="@string/nsct_string"
+        android:textColor="@color/nsct_color"
+        android:textSize="36sp" />
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nsct"
+        android:background="@drawable/rectangle_1_shape" />
+
+    <TextView
+        android:id="@+id/tvDangNhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"
+        android:textColor="@color/color_text"
+        android:layout_below="@+id/nsct"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="35dp"
+        />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@+id/tvDangNhap"
+        android:layout_marginTop="45dp"
+        android:text="Nhập email"
+        android:textColor="@color/edittext"
+        android:textSize="20dp"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        />
+
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@+id/et_email"
+        android:layout_marginTop="15dp"
+        android:text="Nhập password"
+        android:textColor="@color/edittext"
+        android:textSize="20dp"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_email"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="44dp"
+        android:src="@drawable/img_eye" />
+
+    <TextView
+        android:id="@+id/tv_quenmk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_pass"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:onClick="on_click_dn_qmk"
+        android:text="Quên mật khẩu?"
+        android:textAlignment="textEnd"
+        android:textColor="@color/quenmk"
+        android:textSize="16.5dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:text="Đăng nhập"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:layout_below="@+id/tv_quenmk"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:onClick="on_click_dn_login"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
+    android:background="@color/background"
+    tools:context=".CaiDat">
+
+    <TextView
+        android:id="@+id/cai_dat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Cài đặt"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/nsct_color"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/cai_dat_iv_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/img_return_white"
+        android:onClick="onlick_cai_dat_return"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="87dp"
+        android:background="@drawable/rectangle_1_shape"/>
+
+    <RelativeLayout
+        android:id="@+id/cai_dat_rl_doiMK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginStart="35dp"
+        android:onClick="on_click_cai_dat_doiMK">
+
+        <ImageView
+            android:id="@id/cai_dat_iv_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lock"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đổi mật khẩu"
+            android:textSize="20dp"
+            android:textColor="@color/color_text"
+            android:layout_toRightOf="@+id/cai_dat_iv_lock"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_right"
+            android:layout_marginStart="310dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cai_dat_rl_qrCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cai_dat_rl_doiMK"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:onClick="on_click_cai_dat_qrCode">
+
+        <ImageView
+            android:id="@+id/cai_dat_iv_qrCode"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/img_qr_code" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QR Code"
+            android:textSize="20dp"
+            android:textColor="@color/color_text"
+            android:layout_toRightOf="@+id/cai_dat_iv_qrCode"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_right"
+            android:layout_marginStart="310dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</RelativeLayout>

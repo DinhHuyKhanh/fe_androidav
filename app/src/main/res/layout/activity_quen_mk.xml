@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
+    android:background="@color/background"
+    tools:context=".QuenMK">
+
+    <TextView
+        android:id="@+id/nsct"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="@string/nsct_string"
+        android:textColor="@color/nsct_color"
+        android:textSize="36sp" />
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nsct"
+        android:background="@drawable/rectangle_1_shape" />
+
+    <TextView
+        android:id="@+id/tvDangNhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quên mật khẩu"
+        android:textColor="@color/color_text"
+        android:layout_below="@+id/nsct"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="35dp"
+        />
+
+    <TextView
+        android:id="@+id/qmk_tv_thongbao"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@+id/tvDangNhap"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/color_text"
+        android:textSize="16dp"
+        android:text="Quý khách vui lòng cung cấp thông tin đã đăng ký dịch vụ để xác thực yêu cầu cấp lại mật khẩu"
+        />
+
+    <EditText
+        android:id="@+id/qmk_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@+id/qmk_tv_thongbao"
+        android:layout_marginTop="15dp"
+        android:text="Nhập email"
+        android:textColor="@color/edittext"
+        android:textSize="20dp"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/qmk_btn_huy"
+        android:layout_width="162dp"
+        android:layout_height="62dp"
+        android:layout_below="@+id/qmk_et_email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_bg"
+        android:onClick="on_click_qmk_huy"
+        android:text="Hủy"
+        android:textColor="@color/color_text"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/qmk_btn_tieptuc"
+        android:layout_width="162dp"
+        android:layout_height="62dp"
+        android:layout_below="@+id/qmk_et_email"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_bg"
+        android:onClick="on_click_qmk_btn_tieptuc"
+        android:text="Tiếp tục"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
+    android:background="@color/white"
+    tools:context=".TrangChu">
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:background="@drawable/rectangle_black_oval" />
+
+    <TextView
+        android:id="@+id/nsct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/nsct_string"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/nsct_color"
+        android:textSize="36sp" />
+
+    <ImageView
+        android:id="@+id/trang_chu_iv_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/log_out" />
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/trang_chu_iv_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/call" />
+
+    <View
+        android:id="@+id/trang_chu_v"
+        android:layout_width="344dp"
+        android:layout_height="158dp"
+        android:background="@drawable/info_user"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="125dp"
+        android:elevation="10dp"
+        />
+
+    <View
+        android:layout_width="74dp"
+        android:layout_height="70dp"
+        android:background="@drawable/profige"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="151dp"
+        android:elevation="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xin chào"
+        android:textSize="14dp"
+        android:textColor="@color/color696969"
+        android:layout_marginTop="164dp"
+        android:layout_marginLeft="137dp"
+        android:elevation="10dp"
+        />
+
+    <TextView
+        android:id="@+id/trang_chu_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Hoàng Tùng"
+        android:textSize="18dp"
+        android:textColor="@color/color_text"
+        android:layout_marginTop="187dp"
+        android:layout_marginLeft="137dp"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số dư ví"
+        android:textSize="12dp"
+        android:textColor="@color/color696969"
+        android:layout_marginTop="242dp"
+        android:layout_marginLeft="53dp"
+        android:elevation="10dp"
+        />
+
+    <TextView
+        android:id="@+id/trang_chu_tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="***************"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="239dp"
+        android:layout_marginLeft="110dp"
+        android:elevation="10dp" />
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="238dp"
+        android:layout_marginStart="221dp"
+        android:src="@drawable/hide_eye"
+        android:elevation="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/trang_chu_iv_list_car"
+        android:layout_width="72dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="324dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="70dp"
+            android:src="@drawable/cars" />
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:text="Danh sách xe"
+            android:textAlignment="center"
+            android:textColor="@color/color696969" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trang_chu_iv_history_car"
+        android:layout_width="72dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="324dp"
+        android:orientation="vertical"
+        android:onClick="on_click_trang_chu_history_cars">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="70dp"
+            android:src="@drawable/history_car" />
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:text="Lịch sử gửi xe"
+            android:textAlignment="center"
+            android:textColor="@color/color696969" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trang_chu_iv_setting"
+        android:layout_width="72dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginStart="289dp"
+        android:onClick="on_click_trang_chu_setting">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="70dp"
+            android:src="@drawable/setting"/>
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="38dp"
+            android:text="Cài đặt"
+            android:layout_marginTop="405dp"
+            android:layout_marginStart="285dp"
+            android:textAlignment="center"
+            android:textColor="@color/color696969"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="78dp"
+        android:layout_height="38dp"
+        android:text="Cài đặt"
+        android:layout_marginTop="405dp"
+        android:layout_marginStart="285dp"
+        android:textAlignment="center"
+        android:textColor="@color/color696969"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/rectangle_black"
+        android:layout_alignParentBottom="true"
+        />
+    
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="61dp"
+        android:src="@drawable/trang_chu_sang"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="12dp"/>
+
+    <ImageView
+        android:id="@+id/trang_chu_iv_thong_bao"
+        android:layout_width="77dp"
+        android:layout_height="54dp"
+        android:src="@drawable/thong_bao"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="173dp"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/trang_chu_iv_tai_khoan"
+        android:layout_width="69dp"
+        android:layout_height="51dp"
+        android:src="@drawable/tai_khoan"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>

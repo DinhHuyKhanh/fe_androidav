@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
+    android:background="@color/background"
+    tools:context=".DoiMatKhau">
+
+    <TextView
+        android:id="@+id/doiMK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Đổi mật khẩu"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/nsct_color"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/doiMK_iv_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/img_return_white"
+        android:onClick="onlick_doiMK_return"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="87dp"
+        android:background="@drawable/rectangle_1_shape"/>
+
+    <TextView
+        android:id="@+id/doiMK_tv_thong_bao"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@+id/doiMK"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/color_text"
+        android:textSize="16dp"
+        android:text="Vui lòng nhập mật khẩu cũ và mới để tạo mật khẩu mới"
+        />
+
+    <EditText
+        android:id="@+id/doiMK_et_mat_khau_cu"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@+id/doiMK_tv_thong_bao"
+        android:layout_marginTop="15dp"
+        android:text="Nhập mật khẩu cũ"
+        android:textColor="@color/edittext"
+        android:textSize="20dp"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        />
+
+    <EditText
+        android:id="@+id/doiMK_et_mat_khau_moi"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@+id/doiMK_et_mat_khau_cu"
+        android:layout_marginTop="15dp"
+        android:text="Nhập mật khẩu mới"
+        android:textColor="@color/edittext"
+        android:textSize="20dp"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        />
+
+    <EditText
+        android:id="@+id/doiMK_et_mat_khau_xac_nhan"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@+id/doiMK_et_mat_khau_moi"
+        android:layout_marginTop="15dp"
+        android:text="Nhập lại mật khẩu mới"
+        android:textColor="@color/edittext"
+        android:textSize="20dp"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/doiMK_btn_doiMK"
+        android:layout_width="230dp"
+        android:layout_height="62dp"
+        android:layout_below="@+id/doiMK_et_mat_khau_xac_nhan"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_bg"
+        android:text="Đổi mật khẩu"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:onClick="on_click_doiMK_btn_doimk"/>
+</RelativeLayout>

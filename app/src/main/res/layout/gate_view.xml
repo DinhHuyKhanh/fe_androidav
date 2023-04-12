@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp">
+
+    <View
+        android:layout_width="14dp"
+        android:layout_height="138dp"
+        android:layout_marginLeft="19dp"
+        android:background="@drawable/gate_item"/>
+
+    <TextView
+        android:id="@+id/gate_view_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="48dp"
+        android:textSize="15dp"
+        android:textColor="@color/color_text"
+        android:text="Thời gian gửi: "/>
+
+    <TextView
+        android:id="@+id/gate_view_tv_set_time_gui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/gate_view_tv1"
+        android:textSize="15dp"
+        android:textColor="@color/color_text"
+        android:text="19:17:08 - 18/02/2023"/>
+
+    <TextView
+        android:id="@+id/gate_view_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_text"
+        android:layout_below="@+id/gate_view_tv1"
+        android:text="Thời gian lấy: "/>
+
+    <TextView
+        android:id="@+id/gate_view_tv_set_time_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/gate_view_tv2"
+        android:layout_below="@+id/gate_view_tv_set_time_gui"
+        android:textSize="15dp"
+        android:textColor="@color/color_text"
+        android:text="19:17:08 - 18/02/2023"/>
+
+    <TextView
+        android:id="@+id/gate_view_tv_set_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_text"
+        android:layout_below="@+id/gate_view_tv2"
+        android:text="30E-330.60T"/>
+
+    <TextView
+        android:id="@+id/gate_view_tv_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_text"
+        android:layout_below="@+id/gate_view_tv_set_plate"
+        android:text="Số tiền: "/>
+
+    <TextView
+        android:id="@+id/gate_view_tv_set_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/gate_view_tv_tv3"
+        android:layout_below="@+id/gate_view_tv_set_plate"
+        android:textSize="15dp"
+        android:textColor="@color/color_text"
+        android:text="30.000"/>
+
+    <TextView
+        android:id="@+id/gate_view_tv_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:textSize="15dp"
+        android:textColor="@color/color_text"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/gate_view_tv_tv3"
+        android:text="Mã giao dịch: "/>
+
+    <TextView
+        android:id="@+id/gate_view_tv_set_magd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_text"
+        android:layout_toRightOf="@+id/gate_view_tv_tv4"
+        android:layout_below="@+id/gate_view_tv_tv3"
+        android:textSize="15dp"
+        android:text="12345678"/>
+</RelativeLayout>

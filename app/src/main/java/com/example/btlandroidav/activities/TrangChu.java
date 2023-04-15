@@ -1,20 +1,17 @@
-package com.example.btlandroidav;
+package com.example.btlandroidav.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.btlandroidav.adapter.GateHistoryViewAdapter;
-import com.example.btlandroidav.response.GateHistory;
+import com.example.btlandroidav.R;
+import com.example.btlandroidav.networks.RetrofitClient;
 import com.example.btlandroidav.response.Triplet;
 import com.example.btlandroidav.response.User;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,7 +21,7 @@ public class TrangChu extends AppCompatActivity {
 
     private TextView name_user;
     private TextView coin;
-    private Integer user_id;
+    private Integer user_id = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +29,7 @@ public class TrangChu extends AppCompatActivity {
         setContentView(R.layout.activity_trang_chu);
 
         init();
-        user_id = getInfoFromIntent();
+        getInfoFromIntent();
         get_by_id(user_id);
     }
 
@@ -41,15 +38,21 @@ public class TrangChu extends AppCompatActivity {
         coin = findViewById(R.id.trang_chu_tv_money);
     }
 
-    private int getInfoFromIntent(){
+    private void getInfoFromIntent(){
         Intent intent = getIntent();
-        return intent.getIntExtra("id_user", 0);
+        user_id = intent.getIntExtra("id_user", 0);
     }
 
     public void on_click_trang_chu_history_cars(View view){
         Intent intent = new Intent();
         intent.putExtra("id_user", user_id);
         intent.setClass(view.getContext(), LichSuGuiXe.class);
+        startActivity(intent);
+    }
+
+    public void on_click_trang_chu_exit(View view){
+        Intent intent = new Intent();
+        intent.setClass(view.getContext(), MainActivity.class);
         startActivity(intent);
     }
 

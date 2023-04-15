@@ -1,4 +1,4 @@
-package com.example.btlandroidav.api;
+package com.example.btlandroidav.networks;
 
 import com.example.btlandroidav.request.EmailSchema;
 import com.example.btlandroidav.request.LoginSchema;

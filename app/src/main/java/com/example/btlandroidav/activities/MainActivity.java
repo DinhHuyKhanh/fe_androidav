@@ -1,4 +1,4 @@
-package com.example.btlandroidav;
+package com.example.btlandroidav.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.btlandroidav.R;
+import com.example.btlandroidav.networks.RetrofitClient;
 import com.example.btlandroidav.request.LoginSchema;
-import com.example.btlandroidav.request.PasswordResetSchema;
 import com.example.btlandroidav.response.Triplet;
 import com.example.btlandroidav.response.User;
 
@@ -43,12 +44,27 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public boolean validateEmail(String email){
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        if (email.matches(emailPattern))
+        {
+            Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
+        return false;
+    }
+
     public void on_click_dn_login(View view){
-        String email = et_email.getText().toString();
+        String email = et_email.getText().toString().trim();
         String password = et_pass.getText().toString();
 
-        LoginSchema loginSchema = new LoginSchema(email, password);
-        login(loginSchema, view);
+        if(validateEmail(email)){
+            LoginSchema loginSchema = new LoginSchema(email, password);
+            login(loginSchema, view);
+        }
     }
 
     public void login(LoginSchema loginSchema, View view){

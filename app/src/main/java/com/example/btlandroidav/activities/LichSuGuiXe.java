@@ -1,19 +1,18 @@
-package com.example.btlandroidav;
+package com.example.btlandroidav.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.btlandroidav.R;
+import com.example.btlandroidav.networks.RetrofitClient;
 import com.example.btlandroidav.adapter.GateHistoryViewAdapter;
-import com.example.btlandroidav.request.EmailSchema;
 import com.example.btlandroidav.response.GateHistory;
 import com.example.btlandroidav.response.Triplet;
-import com.example.btlandroidav.response.User;
 
 import java.util.List;
 
@@ -32,13 +31,13 @@ public class LichSuGuiXe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lich_su_gui_xe);
 
-        user_id = getInfoFromIntent();
+        getInfoFromIntent();
         get_all_gate_histories(user_id);
     }
 
-    private int getInfoFromIntent(){
+    private void getInfoFromIntent(){
         Intent intent = getIntent();
-        return intent.getIntExtra("id_user", 0);
+        user_id = intent.getIntExtra("id_user", 0);
     }
 
     public void onlick_lsgs_return(View view){

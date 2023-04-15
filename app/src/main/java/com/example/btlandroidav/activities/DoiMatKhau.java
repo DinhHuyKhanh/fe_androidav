@@ -1,4 +1,4 @@
-package com.example.btlandroidav;
+package com.example.btlandroidav.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.btlandroidav.request.PasswordResetSchema;
+import com.example.btlandroidav.R;
+import com.example.btlandroidav.networks.RetrofitClient;
 import com.example.btlandroidav.request.UpdatePasswordSchema;
 import com.example.btlandroidav.response.Triplet;
 
@@ -18,7 +19,7 @@ import retrofit2.Response;
 
 public class DoiMatKhau extends AppCompatActivity {
 
-    private int user_id = 0;
+    private Integer user_id = 0;
     private TextView tv_old_password;
     private TextView tv_new_password;
     private TextView tv_xn_new_password;
@@ -29,7 +30,7 @@ public class DoiMatKhau extends AppCompatActivity {
         setContentView(R.layout.activity_doi_mat_khau);
 
         init();
-        user_id = getInfoFromIntent();
+        getInfoFromIntent();
     }
 
     private void init(){
@@ -38,9 +39,9 @@ public class DoiMatKhau extends AppCompatActivity {
         tv_xn_new_password = findViewById(R.id.doiMK_et_mat_khau_xac_nhan);
     }
 
-    private int getInfoFromIntent(){
+    private void getInfoFromIntent(){
         Intent intent = getIntent();
-        return intent.getIntExtra("id_user", 0);
+        user_id = intent.getIntExtra("id_user", 0);
     }
 
     public void onlick_doiMK_return(View view){

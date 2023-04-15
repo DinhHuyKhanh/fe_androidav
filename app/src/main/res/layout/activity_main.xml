@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <TextView
         android:id="@+id/nsct"
@@ -42,15 +42,15 @@
         android:layout_width="match_parent"
         android:layout_height="62dp"
         android:layout_below="@+id/tvDangNhap"
-        android:layout_marginTop="45dp"
-        android:text="Nhập email"
-        android:textColor="@color/edittext"
-        android:textSize="20dp"
-        android:background="@drawable/edit_text_bg"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="45dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Nhập email"
+        android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
-        />
+        android:textColor="@color/edittext"
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/et_pass"
@@ -58,7 +58,8 @@
         android:layout_height="62dp"
         android:layout_below="@+id/et_email"
         android:layout_marginTop="15dp"
-        android:text="Nhập password"
+        android:inputType="textPassword"
+        android:hint="Nhập password"
         android:textColor="@color/edittext"
         android:textSize="20dp"
         android:background="@drawable/edit_text_bg"
@@ -74,6 +75,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="44dp"
+        android:visibility="invisible"
         android:src="@drawable/img_eye" />
 
     <TextView

@@ -15,28 +15,28 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".QrCode"
+            android:name=".activities.QrCode"
             android:exported="false" />
         <activity
-            android:name=".DoiMatKhau"
+            android:name=".activities.DoiMatKhau"
             android:exported="false" />
         <activity
-            android:name=".CaiDat"
+            android:name=".activities.CaiDat"
             android:exported="false" />
         <activity
-            android:name=".LichSuGuiXe"
+            android:name=".activities.LichSuGuiXe"
             android:exported="false" />
         <activity
-            android:name=".TrangChu"
+            android:name=".activities.TrangChu"
             android:exported="false" />
         <activity
-            android:name=".DatLaiMK"
+            android:name=".activities.DatLaiMK"
             android:exported="false" />
         <activity
-            android:name=".QuenMK"
+            android:name=".activities.QuenMK"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

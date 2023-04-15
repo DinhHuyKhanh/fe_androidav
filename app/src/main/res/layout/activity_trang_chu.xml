@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     android:background="@color/white"
-    tools:context=".TrangChu">
+    tools:context=".activities.TrangChu">
 
     <View
         android:id="@+id/rectangle_1"
@@ -31,6 +31,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp"
         android:layout_marginStart="24dp"
+        android:onClick="on_click_trang_chu_exit"
         android:src="@drawable/log_out" />
 
     <ImageView

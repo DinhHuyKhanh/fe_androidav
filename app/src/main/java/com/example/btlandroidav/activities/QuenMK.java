@@ -1,4 +1,4 @@
-package com.example.btlandroidav;
+package com.example.btlandroidav.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.btlandroidav.R;
+import com.example.btlandroidav.networks.RetrofitClient;
 import com.example.btlandroidav.request.EmailSchema;
 import com.example.btlandroidav.response.Triplet;
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     android:background="@color/background"
-    tools:context=".QuenMK">
+    tools:context=".activities.QuenMK">
 
     <TextView
         android:id="@+id/nsct"
@@ -56,7 +56,7 @@
         android:layout_height="62dp"
         android:layout_below="@+id/qmk_tv_thongbao"
         android:layout_marginTop="15dp"
-        android:text="Nhập email"
+        android:hint="Nhập email"
         android:textColor="@color/edittext"
         android:textSize="20dp"
         android:background="@drawable/edit_text_bg"

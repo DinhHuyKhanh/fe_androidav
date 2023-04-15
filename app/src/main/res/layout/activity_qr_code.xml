@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     android:background="@color/background"
-    tools:context=".QrCode">
+    tools:context=".activities.QrCode">
 
     <TextView
         android:id="@+id/qrCode"
@@ -29,8 +29,9 @@
         android:onClick="onlick_qrcode_return"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/qrCode_iv_qrcode"
+        android:layout_width="249dp"
+        android:layout_height="249dp"
         android:layout_centerInParent="true"
         android:src="@drawable/img_qr_code" />
 </RelativeLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     android:background="@color/background"
-    tools:context=".LichSuGuiXe">
+    tools:context=".activities.LichSuGuiXe">
 
     <TextView
         android:id="@+id/lsgx"

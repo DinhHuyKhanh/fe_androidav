@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     android:background="@color/background"
-    tools:context=".DoiMatKhau">
+    tools:context=".activities.DoiMatKhau">
 
     <TextView
         android:id="@+id/doiMK"
@@ -53,13 +53,14 @@
         android:layout_height="62dp"
         android:layout_below="@+id/doiMK_tv_thong_bao"
         android:layout_marginTop="15dp"
-        android:text="Nhập mật khẩu cũ"
+        android:hint="Nhập mật khẩu cũ"
         android:textColor="@color/edittext"
         android:textSize="20dp"
         android:background="@drawable/edit_text_bg"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingLeft="20dp"
+        android:inputType="textPassword"
         />
 
     <EditText
@@ -68,13 +69,14 @@
         android:layout_height="62dp"
         android:layout_below="@+id/doiMK_et_mat_khau_cu"
         android:layout_marginTop="15dp"
-        android:text="Nhập mật khẩu mới"
+        android:hint="Nhập mật khẩu mới"
         android:textColor="@color/edittext"
         android:textSize="20dp"
         android:background="@drawable/edit_text_bg"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingLeft="20dp"
+        android:inputType="textPassword"
         />
 
     <EditText
@@ -83,13 +85,14 @@
         android:layout_height="62dp"
         android:layout_below="@+id/doiMK_et_mat_khau_moi"
         android:layout_marginTop="15dp"
-        android:text="Nhập lại mật khẩu mới"
+        android:hint="Nhập lại mật khẩu mới"
         android:textColor="@color/edittext"
         android:textSize="20dp"
         android:background="@drawable/edit_text_bg"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingLeft="20dp"
+        android:inputType="textPassword"
         />
 
     <Button

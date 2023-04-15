@@ -1,6 +1,4 @@
-package com.example.btlandroidav;
-
-import com.example.btlandroidav.api.Api;
+package com.example.btlandroidav.networks;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

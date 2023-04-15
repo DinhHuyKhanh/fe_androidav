@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     android:background="@color/background"
-    tools:context=".DatLaiMK">
+    tools:context=".activities.DatLaiMK">
 
     <TextView
         android:id="@+id/nsct"
@@ -65,7 +65,7 @@
         android:layout_height="62dp"
         android:layout_below="@+id/et_email"
         android:layout_marginTop="15dp"
-        android:text="Nhập mã"
+        android:hint="Nhập mã"
         android:textColor="@color/edittext"
         android:textSize="20dp"
         android:background="@drawable/edit_text_bg"
@@ -80,12 +80,13 @@
         android:layout_height="62dp"
         android:layout_below="@+id/dlmk_et_otp"
         android:layout_marginTop="15dp"
-        android:text="Nhập mật khẩu mới"
+        android:hint="Nhập mật khẩu mới"
         android:textColor="@color/edittext"
         android:textSize="20dp"
         android:background="@drawable/edit_text_bg"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:inputType="textPassword"
         android:paddingLeft="20dp"
         />
 
@@ -95,12 +96,13 @@
         android:layout_height="62dp"
         android:layout_below="@+id/dlmk_et_newpass"
         android:layout_marginTop="15dp"
-        android:text="Nhập lại mật khẩu mới"
+        android:hint="Nhập lại mật khẩu mới"
         android:textColor="@color/edittext"
         android:textSize="20dp"
         android:background="@drawable/edit_text_bg"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:inputType="textPassword"
         android:paddingLeft="20dp"
         />
 

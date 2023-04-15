@@ -1,10 +1,12 @@
-package com.example.btlandroidav;
+package com.example.btlandroidav.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.btlandroidav.R;
 
 public class CaiDat extends AppCompatActivity {
     private int user_id = 0;
@@ -13,12 +15,12 @@ public class CaiDat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cai_dat);
 
-        user_id = getInfoFromIntent();
+        getInfoFromIntent();
     }
 
-    private int getInfoFromIntent(){
+    private void getInfoFromIntent(){
         Intent intent = getIntent();
-        return intent.getIntExtra("id_user", 0);
+        user_id = intent.getIntExtra("id_user", 0);
     }
 
     public void onlick_cai_dat_return(View view){

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     android:background="@color/background"
-    tools:context=".CaiDat">
+    tools:context=".activities.CaiDat">
 
     <TextView
         android:id="@+id/cai_dat"

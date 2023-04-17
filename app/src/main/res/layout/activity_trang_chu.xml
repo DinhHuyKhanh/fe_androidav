@@ -90,7 +90,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Số dư ví"
+        android:text="Số dư ví:"
         android:textSize="12dp"
         android:textColor="@color/color696969"
         android:layout_marginTop="242dp"
@@ -123,7 +123,8 @@
         android:layout_height="120dp"
         android:layout_marginStart="43dp"
         android:layout_marginTop="324dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:onClick="on_click_trang_chu_list_car">
 
         <ImageView
             android:layout_width="72dp"
@@ -206,7 +207,7 @@
         android:layout_height="61dp"
         android:src="@drawable/trang_chu_sang"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="80dp"
         android:layout_marginBottom="12dp"/>
 
     <ImageView
@@ -216,7 +217,8 @@
         android:src="@drawable/thong_bao"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="173dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/trang_chu_iv_tai_khoan"
@@ -225,6 +227,7 @@
         android:src="@drawable/tai_khoan"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="on_click_trang_chu_tai_khoan"/>
 </RelativeLayout>

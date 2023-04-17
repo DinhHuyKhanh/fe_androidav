@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.example.btlandroidav.R;
 import com.example.btlandroidav.networks.RetrofitClient;
-import com.example.btlandroidav.response.Triplet;
+import com.example.btlandroidav.response.tuple.Triplet;
 import com.example.btlandroidav.response.User;
 
 import retrofit2.Call;
@@ -63,6 +63,13 @@ public class TrangChu extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void on_click_trang_chu_list_car(View view){
+        Intent intent = new Intent();
+        intent.putExtra("id_user", user_id);
+        intent.setClass(view.getContext(), DanhSachXe.class);
+        startActivity(intent);
+    }
+
     public void get_by_id(Integer user_id){
         Call<Triplet<User, Integer, String>> call = RetrofitClient.getInstance().getMyApi().get_by_id(user_id);
         call.enqueue(new Callback<Triplet<User, Integer, String>>() {
@@ -75,7 +82,7 @@ public class TrangChu extends AppCompatActivity {
                     User user = results.getFirst();
                     Toast.makeText(getApplicationContext(), "Get users success", Toast.LENGTH_LONG).show();
                     name_user.setText(user.getFullName());
-                    coin.setText(Double.toString(user.getCoin()));
+                    coin.setText(String.format("%.0f", user.getCoin()));
                 }
             }
 

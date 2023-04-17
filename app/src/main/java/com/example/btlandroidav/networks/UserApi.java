@@ -4,10 +4,8 @@ import com.example.btlandroidav.request.EmailSchema;
 import com.example.btlandroidav.request.LoginSchema;
 import com.example.btlandroidav.request.PasswordResetSchema;
 import com.example.btlandroidav.request.UpdatePasswordSchema;
-import com.example.btlandroidav.response.Triplet;
+import com.example.btlandroidav.response.tuple.Triplet;
 import com.example.btlandroidav.response.User;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -25,9 +23,6 @@ public interface UserApi {
 
     @POST("users/login")
     Call<Triplet<User, Integer, String>> login(@Body LoginSchema loginSchema);
-
-    @GET("users/")
-    Call<Triplet<List<User>, Integer, String>> get_all_user();
 
     @GET("users/{id}")
     Call<Triplet<User, Integer, String>> get_by_id(@Path("id") int id);

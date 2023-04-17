@@ -12,7 +12,7 @@ import com.example.btlandroidav.R;
 import com.example.btlandroidav.networks.RetrofitClient;
 import com.example.btlandroidav.adapter.GateHistoryViewAdapter;
 import com.example.btlandroidav.response.GateHistory;
-import com.example.btlandroidav.response.Triplet;
+import com.example.btlandroidav.response.tuple.Triplet;
 
 import java.util.List;
 
@@ -57,7 +57,6 @@ public class LichSuGuiXe extends AppCompatActivity {
 
                 if(results.getSecond() == 0)
                 {
-                    Toast.makeText(getApplicationContext(), results.getThird(), Toast.LENGTH_LONG).show();
                     productListViewAdapter = new GateHistoryViewAdapter(results.getFirst());
                     listViewProduct = findViewById(R.id.listViewProduct);
                     listViewProduct.setAdapter(productListViewAdapter);

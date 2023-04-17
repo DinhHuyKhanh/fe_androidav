@@ -1,4 +1,4 @@
-package com.example.btlandroidav.response;
+package com.example.btlandroidav.response.tuple;
 
 import com.google.gson.annotations.SerializedName;
 

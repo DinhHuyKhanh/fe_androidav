@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.example.btlandroidav.R;
 import com.example.btlandroidav.networks.RetrofitClient;
 import com.example.btlandroidav.request.PasswordResetSchema;
-import com.example.btlandroidav.response.Triplet;
+import com.example.btlandroidav.response.tuple.Triplet;
 
 import retrofit2.Call;
 import retrofit2.Callback;

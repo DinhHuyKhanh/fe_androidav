@@ -1,8 +1,10 @@
 package com.example.btlandroidav.utils;
 
+import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.TimeZone;
 
 public class Helper {
@@ -16,5 +18,11 @@ public class Helper {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static final String formatMoney(double money){
+        Locale localeVN = new Locale("vi", "VN");
+        NumberFormat numberFormat = NumberFormat.getNumberInstance(localeVN);
+        return numberFormat.format(money);
     }
 }

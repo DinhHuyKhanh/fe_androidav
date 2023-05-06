@@ -13,6 +13,8 @@ public class GateHistory {
     private String numberPlate;
     @SerializedName("UserId")
     private Integer userId;
+    @SerializedName("Coin")
+    private Double coin;
 
     public Integer getId() {
         return id;
@@ -52,5 +54,9 @@ public class GateHistory {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    public Double getCoin() {
+        return coin;
     }
 }

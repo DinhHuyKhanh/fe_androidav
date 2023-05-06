@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/img_loa"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="63dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông báo"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/tb_view_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TK nSCT -30,000VND vao 19:17:08 18/02/2023. So du: 54,000VND. ND: Tru phi gui xe cua xe 30E33060. Hotline: 19006111"
+        android:textSize="14.5dp"
+        android:textColor="@color/color_text"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="52dp"/>
+
+    <TextView
+        android:id="@+id/tb_view_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19:17:08 - 18/02/2023"
+        android:textSize="15dp"
+        android:textColor="@color/green"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>

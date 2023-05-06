@@ -12,6 +12,7 @@ import com.example.btlandroidav.R;
 import com.example.btlandroidav.networks.RetrofitClient;
 import com.example.btlandroidav.response.tuple.Triplet;
 import com.example.btlandroidav.response.User;
+import com.example.btlandroidav.utils.Helper;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -70,6 +71,20 @@ public class TrangChu extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void on_click_trang_chu_tai_khoan(View view){
+        Intent intent = new Intent();
+        intent.putExtra("id_user", user_id);
+        intent.setClass(view.getContext(), TaiKhoan.class);
+        startActivity(intent);
+    }
+
+    public void on_click_trang_chu_thong_bao(View view){
+        Intent intent = new Intent();
+        intent.putExtra("id_user", user_id);
+        intent.setClass(view.getContext(), ThongBao.class);
+        startActivity(intent);
+    }
+
     public void get_by_id(Integer user_id){
         Call<Triplet<User, Integer, String>> call = RetrofitClient.getInstance().getMyApi().get_by_id(user_id);
         call.enqueue(new Callback<Triplet<User, Integer, String>>() {
@@ -82,7 +97,7 @@ public class TrangChu extends AppCompatActivity {
                     User user = results.getFirst();
                     Toast.makeText(getApplicationContext(), "Get users success", Toast.LENGTH_LONG).show();
                     name_user.setText(user.getFullName());
-                    coin.setText(String.format("%.0f", user.getCoin()));
+                    coin.setText(Helper.formatMoney(user.getCoin()));
                 }
             }
 

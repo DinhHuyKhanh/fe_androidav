@@ -34,6 +34,7 @@
         android:textAlignment="center"/>
 
     <TextView
+        android:id="@+id/tai_khoan_tv_so_tien"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
@@ -50,32 +51,120 @@
         android:layout_alignParentBottom="true"
         />
 
-    <ImageView
-        android:layout_width="95dp"
-        android:layout_height="61dp"
-        android:src="@drawable/trang_chu_sang"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="12dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="194dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/rectangle_1_shape"/>
+    
+    <LinearLayout
+        android:id="@+id/tai_khoan_select"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="194dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="on_click_tai_khoan_tat_ca"
+            android:text="Tất cả"
+            android:textColor="@color/color_text"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tai_khoan_tien_vao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="on_click_tai_khoan_tien_vao"
+            android:text="Tiền vào"
+            android:textColor="@color/color_text"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tai_khoan_tien_ra"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="on_click_tai_khoan_tien_ra"
+            android:text="Tiền ra"
+            android:textColor="@color/color_text"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/tai_khoan_select">
+
+        <View
+            android:id="@+id/tai_khoan_line_of_tatca"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_black"/>
+
+        <View
+            android:id="@+id/tai_khoan_line_of_tienvao"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:background="@drawable/rectangle_black"/>
+
+        <View
+            android:id="@+id/tai_khoan_line_of_tienra"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:background="@drawable/rectangle_black"/>
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/tai_khoan_expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="255dp"
+        android:layout_marginBottom="90dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />
 
     <ImageView
-        android:id="@+id/trang_chu_iv_thong_bao"
+        android:id="@+id/tai_khoan_iv_trang_chu"
+        android:layout_width="95dp"
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="on_click_tai_khoan_trang_chu"
+        android:src="@drawable/trang_chu_toi" />
+
+    <ImageView
+        android:id="@+id/tai_khoan_iv_thong_bao"
         android:layout_width="77dp"
         android:layout_height="54dp"
-        android:src="@drawable/thong_bao"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="173dp"
         android:layout_marginBottom="20dp"
-        android:visibility="invisible"/>
+        android:onClick="on_click_tai_khoan_thong_bao"
+        android:src="@drawable/thong_bao" />
 
     <ImageView
-        android:id="@+id/trang_chu_iv_tai_khoan"
+        android:id="@+id/tai_khoan_iv_tai_khoan"
         android:layout_width="69dp"
         android:layout_height="51dp"
-        android:src="@drawable/tai_khoan"
+        android:src="@drawable/tai_khoan_white"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="20dp"
         android:onClick="on_click_trang_chu_tai_khoan"/>
 </RelativeLayout>

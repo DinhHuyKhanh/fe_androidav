@@ -9,7 +9,8 @@
         android:layout_width="14dp"
         android:layout_height="138dp"
         android:layout_marginLeft="19dp"
-        android:background="@drawable/gate_item"/>
+        android:background="@drawable/gate_item"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:id="@+id/gate_view_tv1"

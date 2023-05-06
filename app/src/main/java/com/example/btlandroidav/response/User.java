@@ -18,7 +18,7 @@ public class User {
     @SerializedName("Address")
     private String Address;
     @SerializedName("Coin")
-    private Double Coin;
+    private double Coin;
     @SerializedName("BirthDay")
     private Date BirthDay;
 
@@ -42,7 +42,7 @@ public class User {
         return Address;
     }
 
-    public Double getCoin() {
+    public double getCoin() {
         return Coin;
     }
 
@@ -56,7 +56,7 @@ public class User {
 
     public User() {}
 
-    public User(Integer id, String fullName, Double coin) {
+    public User(Integer id, String fullName, Long coin) {
         this.id = id;
         FullName = fullName;
         Coin = coin;

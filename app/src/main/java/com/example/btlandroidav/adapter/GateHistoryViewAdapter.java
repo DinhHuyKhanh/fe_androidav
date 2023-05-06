@@ -51,7 +51,7 @@ public class GateHistoryViewAdapter extends BaseAdapter {
         time_gui_xe.setText(Helper.formatDateTime(gateHistory.getCheckInDate()));
         time_lay_xe.setText(Helper.formatDateTime(gateHistory.getCheckOutDate()));
         plate.setText(gateHistory.getNumberPlate());
-        money.setText("0.000");
+        money.setText(Helper.formatMoney(gateHistory.getCoin()));
         maGD.setText(gateHistory.getId().toString());
 
         return viewGate;

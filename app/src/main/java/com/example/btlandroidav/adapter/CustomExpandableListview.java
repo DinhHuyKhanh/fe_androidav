@@ -22,9 +22,7 @@ public class CustomExpandableListview extends BaseExpandableListAdapter {
     private HashMap<String, List<TransactionHistory>> expandableListDetail;
 
     public CustomExpandableListview(Context context, List<String>
-            expandableListTitle,
-                                    HashMap<String, List<TransactionHistory>>
-                                            expandableListDetail) {
+            expandableListTitle, HashMap<String, List<TransactionHistory>> expandableListDetail) {
         this.context = context;
         this.expandableListTitle = expandableListTitle;
         this.expandableListDetail = expandableListDetail;

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +23,10 @@ public class TrangChu extends AppCompatActivity {
 
     private TextView name_user;
     private TextView coin;
+    private TextView coinHide;
     private Integer user_id = 0;
+    private ImageView eyeOff;
+    private ImageView eye;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +41,28 @@ public class TrangChu extends AppCompatActivity {
     private void init(){
         name_user = findViewById(R.id.trang_chu_tv_name);
         coin = findViewById(R.id.trang_chu_tv_money);
+        eye = findViewById(R.id.eye);
+        eyeOff = findViewById(R.id.eye_off);
+        coinHide = findViewById(R.id.trang_chu_tv_money_hide);
     }
 
     private void getInfoFromIntent(){
         Intent intent = getIntent();
         user_id = intent.getIntExtra("id_user", 0);
+    }
+
+    public void on_click_trang_chu_eye_off(View view){
+        eye.setVisibility(View.VISIBLE);
+        eyeOff.setVisibility(View.INVISIBLE);
+        coin.setVisibility(View.VISIBLE);
+        coinHide.setVisibility(View.INVISIBLE);
+    }
+
+    public void on_click_trang_chu_eye(View view){
+        eye.setVisibility(View.INVISIBLE);
+        eyeOff.setVisibility(View.VISIBLE);
+        coin.setVisibility(View.INVISIBLE);
+        coinHide.setVisibility(View.VISIBLE);
     }
 
     public void on_click_trang_chu_history_cars(View view){

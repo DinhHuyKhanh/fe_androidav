@@ -107,15 +107,40 @@
         android:textColor="@color/black"
         android:layout_marginTop="239dp"
         android:layout_marginLeft="110dp"
+        android:elevation="10dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/trang_chu_tv_money_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="***************"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="239dp"
+        android:layout_marginLeft="110dp"
         android:elevation="10dp" />
 
     <ImageView
+        android:id="@+id/eye_off"
         android:layout_width="18dp"
         android:layout_height="18dp"
-        android:layout_marginTop="238dp"
         android:layout_marginStart="221dp"
-        android:src="@drawable/hide_eye"
-        android:elevation="10dp"/>
+        android:layout_marginTop="238dp"
+        android:elevation="10dp"
+        android:onClick="on_click_trang_chu_eye_off"
+        android:src="@drawable/eye_off" />
+
+    <ImageView
+        android:id="@+id/eye"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="221dp"
+        android:layout_marginTop="238dp"
+        android:elevation="10dp"
+        android:onClick="on_click_trang_chu_eye"
+        android:src="@drawable/eye"
+        android:visibility="invisible" />
 
     <LinearLayout
         android:id="@+id/trang_chu_iv_list_car"

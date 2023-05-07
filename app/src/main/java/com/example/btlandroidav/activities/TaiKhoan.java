@@ -38,6 +38,8 @@ public class TaiKhoan extends AppCompatActivity {
     View lineTatCa;
     View lineTienRa;
     View lineTienVao;
+    private String ACT_ADD = "add";
+    private String ACT_SUB = "car deposit payment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,14 +97,14 @@ public class TaiKhoan extends AppCompatActivity {
 
     public void on_click_tai_khoan_tien_vao(View view){
         setVisibilityOfView(View.INVISIBLE, View.VISIBLE, View.INVISIBLE);
-        getThoiGianLSGiaoDich(user_id, "add");
-        handleListener(user_id, "add");
+        getThoiGianLSGiaoDich(user_id, ACT_ADD);
+        handleListener(user_id, ACT_ADD);
     }
 
     public void on_click_tai_khoan_tien_ra(View view){
         setVisibilityOfView(View.INVISIBLE, View.INVISIBLE, View.VISIBLE);
-        getThoiGianLSGiaoDich(user_id, "sub");
-        handleListener(user_id, "sub");
+        getThoiGianLSGiaoDich(user_id, ACT_SUB);
+        handleListener(user_id, ACT_SUB);
     }
 
     private void handleListener(int user_id, String act){
@@ -140,7 +142,7 @@ public class TaiKhoan extends AppCompatActivity {
     }
 
     public void getThoiGianLSGiaoDich(Integer user_id, String act){
-        Call<Triplet<List<DateAndYear>, Integer, String>> call = RetrofitClient.getInstance().getMyApi().get_date_created(user_id, act);
+        Call<Triplet<List<DateAndYear>, Integer, String>> call = RetrofitClient.getInstance().getMyApi().getAllTransactionByUserId(user_id, act);
         call.enqueue(new Callback<Triplet<List<DateAndYear>, Integer, String>>() {
             @Override
             public void onResponse(Call<Triplet<List<DateAndYear>, Integer, String>> call, Response<Triplet<List<DateAndYear>, Integer, String>> response) {

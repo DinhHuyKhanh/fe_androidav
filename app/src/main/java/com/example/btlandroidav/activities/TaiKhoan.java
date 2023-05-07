@@ -38,7 +38,7 @@ public class TaiKhoan extends AppCompatActivity {
     View lineTatCa;
     View lineTienRa;
     View lineTienVao;
-    private String ACT_ADD = "add";
+    private String ACT_ADD = "car credit payment";
     private String ACT_SUB = "car deposit payment";
 
     @Override

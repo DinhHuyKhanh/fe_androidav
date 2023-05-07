@@ -88,12 +88,6 @@ public class TaiKhoan extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void on_click_tai_khoan_thong_bao(View view){
-        Intent intent = new Intent();
-        intent.putExtra("id_user", user_id);
-        intent.setClass(view.getContext(), ThongBao.class);
-        startActivity(intent);
-    }
 
     public void on_click_tai_khoan_tien_vao(View view){
         setVisibilityOfView(View.INVISIBLE, View.VISIBLE, View.INVISIBLE);

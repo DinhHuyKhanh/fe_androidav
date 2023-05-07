@@ -142,20 +142,10 @@
         android:layout_width="95dp"
         android:layout_height="61dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="80dp"
         android:layout_marginBottom="12dp"
         android:onClick="on_click_tai_khoan_trang_chu"
         android:src="@drawable/trang_chu_toi" />
-
-    <ImageView
-        android:id="@+id/tai_khoan_iv_thong_bao"
-        android:layout_width="77dp"
-        android:layout_height="54dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="173dp"
-        android:layout_marginBottom="20dp"
-        android:onClick="on_click_tai_khoan_thong_bao"
-        android:src="@drawable/thong_bao" />
 
     <ImageView
         android:id="@+id/tai_khoan_iv_tai_khoan"
@@ -164,7 +154,7 @@
         android:src="@drawable/tai_khoan_white"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginBottom="20dp"
         android:onClick="on_click_trang_chu_tai_khoan"/>
 </RelativeLayout>

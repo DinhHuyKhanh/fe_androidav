@@ -99,13 +99,6 @@ public class TrangChu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void on_click_trang_chu_thong_bao(View view){
-        Intent intent = new Intent();
-        intent.putExtra("id_user", user_id);
-        intent.setClass(view.getContext(), ThongBao.class);
-        startActivity(intent);
-    }
-
     public void get_by_id(Integer user_id){
         Call<Triplet<User, Integer, String>> call = RetrofitClient.getInstance().getMyApi().get_by_id(user_id);
         call.enqueue(new Callback<Triplet<User, Integer, String>>() {
